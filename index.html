@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT FAMILY -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Rufina:400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+
+    <!-- font-awesome.min.css  -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+    <!-- owl.carousel.css -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+
+    <!-- Datepicker css -->
+    <!-- <link rel="stylesheet" href="assets/css/datepicker.css" /> -->
+
+    <!-- Range css -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
+
+    <!-- bootstrap.min.css -->
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- Header Start -->
+    <header class="top-area">
+      <div class="header-area">
+        <nav class="navbar navbar-expand-lg py-3">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-12">
+          <div class="hero-text">
+            <h1>MAU JALAN JALAN?</h1>
+            <p>Semua Ada Disini!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!--travel-box start-->
+    <section class="travel-box">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="single-travel-boxes">
+              <div class="travel-img">
+                <img src="assets/img/1.jpg" alt="" />
+              </div>
+              <div class="travel-content">
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                  <div class="single-tab-select-box">
+                    <h2>check in</h2>
+                    <div class="travel-check-icon">
+                      <form action="#">
+                        <input
+                          type="text"
+                          name="check_in"
+                          class="form-control"
+                          data-toggle="datepicker"
+                          placeholder="12 -01 - 2017 "
+                        />
+                      </form>
+                    </div>
+                    <!-- /.travel-check-icon -->
+                  </div>
+                  <!--/.single-tab-select-box-->
+                </div>
+                <!--/.col-->
+
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                  <div class="single-tab-select-box">
+                    <h2>check out</h2>
+                    <div class="travel-check-icon">
+                      <form action="#">
+                        <input
+                          type="text"
+                          name="check_out"
+                          class="form-control"
+                          data-toggle="datepicker"
+                          placeholder="22 -01 - 2017 "
+                        />
+                      </form>
+                    </div>
+                    <!-- /.travel-check-icon -->
+                  </div>
+                  <!--/.single-tab-select-box-->
+                </div>
+                <!--/.col-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--travel-box end-->
+
+    <!-- project start -->
+
+    <section id="project">
+      <div class="project-container">
+        
+        <h1>Diskon Terbaik Hanya Untuk Anda</h1>
+        <div class="card-container">
+          <div class="project-wrapper">
+            <div class="card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, aliquam.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, aliquam.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, aliquam.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, aliquam.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, aliquam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="project">
+      <div class="project-container">
+        
+        <h1>Wisata Gunung Yang Terbaik Untuk Dikunjungi</h1>
+        <div class="card-container">
+          <div class="project-wrapper">
+            <div class="card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, aliquam.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, aliquam.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, aliquam.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, aliquam.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, aliquam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="project">
+      <div class="project-container">
+        
+        <h1>Mau Tempat Wisata Bersama Keluarga?</h1>
+        <div class="card-container">
+          <div class="project-wrapper">
+            <div class="card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, aliquam.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, aliquam.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, aliquam.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, aliquam.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusamus, aliquam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery"></section>
+			<div class="container">
+				<div class="gallery-details">
+					<div class="gallary-header text-center">
+						<h2>
+							top destination
+						</h2>
+						<p>
+							Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla.  
+						</p>
+					</div><!--/.gallery-header-->
+					<div class="gallery-box">
+						<div class="gallery-content">
+						  	<div class="filtr-container">
+						  		<div class="row">
+
+						  			<div class="col-md-6">
+						  				<div class="filtr-item">
+											<img src="assets/images/gallary/g1.jpg" alt="portfolio image"/>
+											<div class="item-title">
+												<a href="#">
+													china
+												</a>
+												<p><span>20 tours</span><span>15 places</span></p>
+											</div><!-- /.item-title -->
+										</div><!-- /.filtr-item -->
+						  			</div><!-- /.col -->
+
+						  			<div class="col-md-6">
+						  				<div class="filtr-item">
+											<img src="assets/images/gallary/g2.jpg" alt="portfolio image"/>
+											<div class="item-title">
+												<a href="#">
+													venuzuala
+												</a>
+												<p><span>12 tours</span><span>9 places</span></p>
+											</div> <!-- /.item-title-->
+										</div><!-- /.filtr-item -->
+						  			</div><!-- /.col -->
+
+						  			<div class="col-md-4">
+						  				<div class="filtr-item">
+											<img src="assets/images/gallary/g3.jpg" alt="portfolio image"/>
+											<div class="item-title">
+												<a href="#">
+													brazil
+												</a>
+												<p><span>25 tours</span><span>10 places</span></p>
+											</div><!-- /.item-title -->
+										</div><!-- /.filtr-item -->
+						  			</div><!-- /.col -->
+
+						  			<div class="col-md-4">
+						  				<div class="filtr-item">
+											<img src="assets/images/gallary/g4.jpg" alt="portfolio image"/>
+											<div class="item-title">
+												<a href="#">
+													australia 
+												</a>
+												<p><span>18 tours</span><span>9 places</span></p>
+											</div> <!-- /.item-title-->
+										</div><!-- /.filtr-item -->
+						  			</div><!-- /.col -->
+
+						  			<div class="col-md-4">
+						  				<div class="filtr-item">
+											<img src="assets/images/gallary/g5.jpg" alt="portfolio image"/>
+											<div class="item-title">
+												<a href="#">
+													netharland
+												</a>
+												<p><span>14 tours</span><span>12 places</span></p>
+											</div> <!-- /.item-title-->
+										</div><!-- /.filtr-item -->
+						  			</div><!-- /.col -->
+
+						  			<div class="col-md-8">
+						  				<div class="filtr-item">
+											<img src="assets/images/gallary/g6.jpg" alt="portfolio image"/>
+											<div class="item-title">
+												<a href="#">
+													turkey
+												</a>
+												<p><span>14 tours</span><span>6 places</span></p>
+											</div> <!-- /.item-title-->
+										</div><!-- /.filtr-item -->
+						  			</div><!-- /.col -->
+
+						  		</div><!-- /.row -->
+
+						  	</div><!-- /.filtr-container-->
+						</div><!-- /.gallery-content -->
+					</div><!--/.galley-box-->
+				</div><!--/.gallery-details-->
+			</div><!--/.container-->
+
+		</section><!--/.gallery-->
+    <!-- projetct end -->
+
+    <!-- all script -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <!--modernizr.min.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <!-- bootstrap.min.js -->
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- range.js -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+  </body>
+</html>
