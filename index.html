@@ -114,7 +114,7 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-md-12">
           <div class="hero-text">
-            <h1>MAU JALAN JALAN?</h1>
+            <h1 id="First"></h1>
             <p>Semua Ada Disini!</p>
           </div>
         </div>
@@ -364,7 +364,7 @@
       </div>
     </section>
 
-    <section id="gallery" class="gallery"></section>
+    <section id="gallery" class="gallery">
 			<div class="container">
 				<div class="gallery-details">
 					<div class="gallary-header text-center">
@@ -464,6 +464,18 @@
     <!-- projetct end -->
 
     <!-- all script -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed('#First', {
+        strings: ['<i>First</i> sentence.', '&amp; a second sentence.', 'dfxhbjk'],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true,
+        cursorChar: '|',
+        showCursor: false,
+        smartBackspace: true
+      });
+    </script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <!--modernizr.min.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
