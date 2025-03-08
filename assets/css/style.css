@@ -82,26 +82,35 @@ body{
 --------------------------------------*/
 
 .travel-box {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; */
     padding-bottom: 50px;
 }
-.travel-box .container{
-	background-color: aqua;
-	margin-top: -123px;
+
+.single-travel-boxes {
+    margin-top: -125px;
+    background: #fff;
+}
+.tab-para p {
+    font-size: 24px;
+}
+.desc-tabs {
+    border: transparent;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+.tab-para{
+	padding: 43px 42px 24px;
+}
+.single-tab-select-box h2{
+	color: #565a5c;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 17px;
 }
 
-.travel-content {
-    background-color: #f0f0f0;
-    display: flex;
-    flex-wrap: wrap;
-}
-.datepicker{
-    margin: 1rem;
-    width: 10rem;
-    height: 2rem;
-}
 /*-------------------------------------
 		5. Carousel 
 --------------------------------------*/
