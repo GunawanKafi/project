@@ -17,6 +17,47 @@
     <div class="container">
       <div class="div1">1</div>
       <div class="div2">
+        <div class="box">
+          <h6>Pemilihan Maskapai</h6>
+          <div
+            class="btn-group-vertical "
+            role="group"
+            aria-label="Basic checkbox toggle button group"
+          >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck1"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="btncheck1"
+              >Maskapai a</label
+            >
+
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck2"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="btncheck2"
+              >Maskapai b</label
+            >
+
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck3"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-primary" for="btncheck3"
+              >Maskapai c</label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="div3"></div>
+      <div class="div4">
         <div class="dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -28,25 +69,24 @@
             Pilih Sesuai Dengan Kategori
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Lorem ipsum dolor sit.</a></li>
             <li>
-              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Lorem ipsum dolor sit.</a>
             </li>
-            <li><hr class="dropdown-divider" /></li>
             <li>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#">Lorem ipsum dolor sit.</a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="div3">
+      <div class="div5">
         <div class="range-container">
           <h6>Harga Per Orang</h6>
           <p>maksimal <span id="rangeValue">50</span></p>
-          <input type="range" id="rangeInput" min="0" max="100" value="50" />
+          <input type="range" id="rangeInput" min="0" max="10000000" value="5000000" oninput="updateValue(this.value)"/>
         </div>
       </div>
-      <div class="div4">
+      <div class="div6">
         <div class="range-container">
           <h6>Pilih Waktu Keberangkatan</h6>
           <p>
@@ -69,8 +109,6 @@
           </div>
         </div>
       </div>
-      <div class="div5">5</div>
-      <div class="div6">6</div>
       <div class="div7">7</div>
       <div class="div8">8</div>
       <div class="div13">13</div>

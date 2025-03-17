@@ -1,5 +1,3 @@
-const rangeInput = document.getElementById("rangeInput");
-const rangeValue = document.getElementById("rangeValue");
 const rangeFrom = document.getElementById("fromRange");
 const rangeTo = document.getElementById("toRange");
 const valueFrom = document.getElementById("fromSlider");
@@ -67,9 +65,6 @@ setToggleAccessible(toSlider);
 fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider);
 toSlider.oninput = () => controlToSlider(fromSlider, toSlider);
 
-rangeInput.addEventListener("input", function () {
-  rangeValue.textContent = this.value;
-});
 valueTo.addEventListener("input", function () {
   rangeTo.textContent = this.value;
 });
@@ -77,4 +72,15 @@ valueFrom.addEventListener("input", function () {
   rangeFrom.textContent = this.value;
 });
 
+function formatCurrency(value) {
+  return new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    minimumFractionDigits: 0,
+  }).format(value);
+}
 
+function updateValue(value) {
+  document.getElementById("rangeValue").textContent = formatCurrency(value);
+}
+updateValue(document.getElementById("rangeInput").value);

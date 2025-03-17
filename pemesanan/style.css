@@ -23,37 +23,44 @@ body {
   grid-column: span 7 / span 7;
   background-color: aqua;
 }
-/* Div 2 Start */
+/* div 2 Start */
 .div2 {
   grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
   grid-column-start: 1;
   grid-row-start: 2;
   background-color: aqua;
 }
-
-.dropdown{
+.box{
   margin: 1rem;
-  justify-content: center;
-  align-items: center;
 }
-/* Div 2 End */
+.box h6{
+  margin-bottom: 20px;
+}
+/* div 2 End */
 
 .div3 {
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
   grid-column-start: 1;
-  grid-row-start: 3;
+  grid-row-start: 4;
   background-color: aqua;
 }
-
+/* div 4 start */
 .div4 {
   grid-column: span 2 / span 2;
-  grid-row: span 2 / span 2;
+  /* grid-row: span 2 / span 2; */
   grid-column-start: 1;
-  grid-row-start: 5;
+  grid-row-start: 6;
   background-color: aqua;
 }
+.dropdown{
+  margin: 1rem;
+  justify-content: center;
+  align-items: center;
+}
 
+/* div 4 end */
 .div5 {
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
@@ -64,6 +71,7 @@ body {
 
 .div6 {
   grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
   grid-column-start: 1;
   grid-row-start: 9;
   background-color: aqua;
@@ -71,8 +79,9 @@ body {
 
 .div7 {
   grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
   grid-column-start: 1;
-  grid-row-start: 10;
+  grid-row-start: 11;
   background-color: aqua;
 }
 
