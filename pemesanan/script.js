@@ -6,7 +6,7 @@ const valueFrom = document.getElementById("fromSlider");
 const valueTo = document.getElementById("toSlider");
 function controlFromSlider(fromSlider, toSlider) {
   const [from, to] = getParsed(fromSlider, toSlider);
-  fillSlider(fromSlider, toSlider, "#C6C6C6", "#25daa5", toSlider);
+  fillSlider(fromSlider, toSlider, "#C6C6C6", "#0000ff", toSlider);
   if (from > to) {
     fromSlider.value = to;
   } else {
@@ -15,7 +15,7 @@ function controlFromSlider(fromSlider, toSlider) {
 
 function controlToSlider(fromSlider, toSlider) {
   const [from, to] = getParsed(fromSlider, toSlider);
-  fillSlider(fromSlider, toSlider, "#C6C6C6", "#25daa5", toSlider);
+  fillSlider(fromSlider, toSlider, "#C6C6C6", "#0000ff", toSlider);
   setToggleAccessible(toSlider);
   if (from <= to) {
     toSlider.value = to;
@@ -61,7 +61,7 @@ function setToggleAccessible(currentTarget) {
 
 const fromSlider = document.querySelector("#fromSlider");
 const toSlider = document.querySelector("#toSlider");
-fillSlider(fromSlider, toSlider, "#C6C6C6", "#25daa5", toSlider);
+fillSlider(fromSlider, toSlider, "#C6C6C6", "#0000ff", toSlider);
 setToggleAccessible(toSlider);
 
 fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider);
