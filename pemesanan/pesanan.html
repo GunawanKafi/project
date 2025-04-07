@@ -12,15 +12,81 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="container">
-      <div class="div1">1</div>
+    <div class="parent">
+      <div class="div1">
+        <div class="row">
+          <div class="col-md-auto">
+            <p>Dewasa <i class="fa-solid fa-person"></i></p>
+            <select class="form-control">
+              <option value="default">1</option>
+
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="col-md-auto">
+            <p>
+              Anak - Anak
+              <i class="fa-solid fa-child"></i>
+            </p>
+            <select class="form-control">
+              <option value="default">0</option>
+
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+          <div class="col-md-auto">
+            <div class="row">
+              <div class="search-box col" id="from-box">
+                <span class="search-icon"
+                  ><i class="fa-solid fa-plane-departure"></i
+                ></span>
+                <input
+                  type="text"
+                  class="search-input"
+                  id="from-input"
+                  placeholder="Alamat asal"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="recommendations" id="from-recommendations"></div>
+
+              <button class="swap-btn col-md-auto" id="swap-btn">⇅</button>
+
+              <div class="search-box col" id="to-box">
+                <span class="search-icon"
+                  ><i class="fa-solid fa-plane-arrival"></i
+                ></span>
+                <input
+                  type="text"
+                  class="search-input"
+                  id="to-input"
+                  placeholder="Tujuan"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="recommendations" id="to-recommendations"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="div2">
         <div class="box">
           <h6>Pemilihan Maskapai</h6>
           <div
-            class="btn-group-vertical "
+            class="btn-group-vertical"
             role="group"
             aria-label="Basic checkbox toggle button group"
           >
@@ -60,7 +126,7 @@
         <div class="box">
           <h6>Transit</h6>
           <div
-            class="btn-group-vertical "
+            class="btn-group-vertical"
             role="group"
             aria-label="Basic checkbox toggle button group"
           >
@@ -73,7 +139,7 @@
             <label class="btn btn-outline-primary" for="btncheck1"
               >Langsung</label
             >
-  
+
             <input
               type="checkbox"
               class="btn-check"
@@ -83,7 +149,7 @@
             <label class="btn btn-outline-primary" for="btncheck2"
               >1 Transit</label
             >
-  
+
             <input
               type="checkbox"
               class="btn-check"
@@ -95,7 +161,6 @@
             >
           </div>
         </div>
-        
       </div>
       <div class="div4">
         <div class="dropdown">
@@ -108,7 +173,9 @@
             Pilih Sesuai Dengan Kategori
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Lorem ipsum dolor sit.</a></li>
+            <li>
+              <a class="dropdown-item" href="#">Lorem ipsum dolor sit.</a>
+            </li>
             <li>
               <a class="dropdown-item" href="#">Lorem ipsum dolor sit.</a>
             </li>
@@ -122,7 +189,18 @@
         <div class="range-container">
           <h6>Harga Per Orang</h6>
           <p>maksimal <span id="rangeValue"></span></p>
-          <input type="range" id="rangeInput" min="0" max="10000000" value="5000000" oninput="updateValue(this.value)"/>
+          <input
+            type="range"
+            id="rangeInput"
+            min="0"
+            max="10000000"
+            value="5000000"
+            oninput="updateValue(this.value)"
+          />
+          <div class="range-labels">
+            <span>0</span>
+            <span>10.000.000</span>
+          </div>
         </div>
       </div>
       <div class="div6">
@@ -148,10 +226,413 @@
           </div>
         </div>
       </div>
-      <div class="div7">7</div>
-      <div class="div8">8</div>
-      <div class="div13">13</div>
+      <div class="div7">
+        <div class="range-container">
+          <h6>Durasi</h6>
+          <p>Kurang Dari <span id="clockValue">72</span> Jam</p>
+          <input type="range" id="clockInput" min="0" max="72" value="72" />
+          <div class="range-labels">
+            <span>0</span>
+            <span>72</span>
+          </div>
+        </div>
+      </div>
+      <div class="div8">
+        <div class="date-picker-wrapper">
+          <div class="date-picker-container" id="date-picker">
+            <!-- Tombol tanggal akan di-generate oleh JavaScript -->
+          </div>
+        </div>
+      </div>
+      <div class="div13">
+        <div class="container mt-5 mb-5">
+          <div class="d-flex justify-content-center row">
+            <div class="col-md-10">
+              <div class="row p-2 bg-white border rounded">
+                <div class="col-md-3 mt-1">
+                  <img
+                    class="img-fluid img-responsive rounded product-image"
+                    src="https://i.imgur.com/QpjAiHq.jpg"
+                  />
+                </div>
+                <div class="col-md-6 mt-1">
+                  <h5>Quant olap shirts</h5>
+                  <div class="d-flex flex-row">
+                    <div class="ratings mr-2">
+                      <i class="fa fa-star"></i><i class="fa fa-star"></i
+                      ><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <span>310</span>
+                  </div>
+                  <div class="mt-1 mb-1 spec-1">
+                    <span>100% cotton</span><span class="dot"></span
+                    ><span>Light weight</span><span class="dot"></span
+                    ><span>Best finish<br /></span>
+                  </div>
+                  <div class="mt-1 mb-1 spec-1">
+                    <span>Unique design</span><span class="dot"></span
+                    ><span>For men</span><span class="dot"></span
+                    ><span>Casual<br /></span>
+                  </div>
+                  <p class="text-justify text-truncate para mb-0">
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour, or randomised words which don't
+                    look even slightly believable.<br /><br />
+                  </p>
+                </div>
+                <div
+                  class="align-items-center align-content-center col-md-3 border-left mt-1"
+                >
+                  <div class="d-flex flex-row align-items-center">
+                    <h4 class="mr-1">$13.99</h4>
+                    <span class="strike-text">$20.99</span>
+                  </div>
+                  <h6 class="text-success">Free shipping</h6>
+                  <div class="d-flex flex-column mt-4">
+                    <button class="btn btn-primary btn-sm" type="button">
+                      Details</button
+                    ><button
+                      class="btn btn-outline-primary btn-sm mt-2"
+                      type="button"
+                    >
+                      Add to wishlist
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row p-2 bg-white border rounded mt-2 widget">
+                <div class="col-md-3 mt-1">
+                  <img
+                    class="img-fluid img-responsive rounded product-image"
+                    src="https://i.imgur.com/JvPeqEF.jpg"
+                  />
+                </div>
+                <div class="col-md-6 mt-1">
+                  <h5>Quant trident shirts</h5>
+                  <div class="d-flex flex-row">
+                    <div class="ratings mr-2">
+                      <i class="fa fa-star"></i><i class="fa fa-star"></i
+                      ><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <span>310</span>
+                  </div>
+                  <div class="mt-1 mb-1 spec-1">
+                    <span>100% cotton</span><span class="dot"></span
+                    ><span>Light weight</span><span class="dot"></span
+                    ><span>Best finish<br /></span>
+                  </div>
+                  <div class="mt-1 mb-1 spec-1">
+                    <span>Unique design</span><span class="dot"></span
+                    ><span>For men</span><span class="dot"></span
+                    ><span>Casual<br /></span>
+                  </div>
+                  <p class="text-justify text-truncate para mb-0">
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour, or randomised words which don't
+                    look even slightly believable.<br /><br />
+                  </p>
+                </div>
+                <div
+                  class="align-items-center align-content-center col-md-3 border-left mt-1"
+                >
+                  <div class="d-flex flex-row align-items-center">
+                    <h4 class="mr-1">$14.99</h4>
+                    <span class="strike-text">$20.99</span>
+                  </div>
+                  <h6 class="text-success">Free shipping</h6>
+                  <div class="d-flex flex-column mt-4">
+                    <button
+                      class="btn btn-outline-primary btn-sm mt-2"
+                      type="button"
+                    >
+                      Add to wishlist
+                    </button>
+                  </div>
+                </div>
+                <button
+                  class="btn btn-primary btn-sm d-block mx-auto my-0 toggleButton"
+                  style="width: 15rem"
+                  type="button"
+                >
+                  Details
+                </button>
+                <div id="content" class="content hidden">
+                  <div class="col-lg-5 mb-3" id="Sunday, Nov 15th">
+                    <h4 class="mt-0 mb-3 text-dark op-8 font-weight-bold">
+                      Contoh 3 Transit
+                    </h4>
+                    <ul class="list-timeline list-timeline-primary">
+                      <li
+                        class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column"
+                      >
+                        <p class="text-dark flex-fw text-sm text-uppercase">
+                          <span class="text-inverse op-8">09:00 - 10:00</span> -
+                          Lorem, ipsum.
+                        </p>
+                        <p class="mt-10 my-0">Lorem, ipsum.</p>
+                        <p>Lorem.</p>
+                      </li>
+                      <li
+                        class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column"
+                      >
+                        <p class="my-0 text-dark flex-fw text-sm text-uppercase">
+                          <span class="text-inverse op-8">12:00 - 13:00</span> -
+                          Lorem, ipsum.
+                        </p>
+                      </li>
+                    </ul>
+                    <br />
+                    <ul class="list-timeline list-timeline-primary">
+                      <li
+                        class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column"
+                      >
+                        <p class="text-dark flex-fw text-sm text-uppercase">
+                          <span class="text-inverse op-8">09:00 - 10:00</span> -
+                          Lorem, ipsum.
+                        </p>
+                        <p class="mt-10 my-0">Lorem, ipsum.</p>
+                        <p>Lorem.</p>
+                      </li>
+                      <li
+                        class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column"
+                      >
+                        <p class="my-0 text-dark flex-fw text-sm text-uppercase">
+                          <span class="text-inverse op-8">12:00 - 13:00</span> -
+                          Lorem, ipsum.
+                        </p>
+                      </li>
+                    </ul>
+                    <br />
+                    <ul class="list-timeline list-timeline-primary">
+                      <li
+                        class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column"
+                      >
+                        <p class="text-dark flex-fw text-sm text-uppercase">
+                          <span class="text-inverse op-8">09:00 - 10:00</span> -
+                          Lorem, ipsum.
+                        </p>
+                        <p class="mt-10 my-0">Lorem, ipsum.</p>
+                        <p>Lorem.</p>
+                      </li>
+                      <li
+                        class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column"
+                      >
+                        <p class="my-0 text-dark flex-fw text-sm text-uppercase">
+                          <span class="text-inverse op-8">12:00 - 13:00</span> -
+                          Lorem, ipsum.
+                        </p>
+                      </li>
+                    </ul>
+                    <br />
+                    <p class="my-0"><i class="fa-solid fa-hotel"></i>Lorem, ipsum.</p>
+                    <p class="my-0"><i class="fa-solid fa-plane"></i>Lorem, ipsum.</p>
+                    <p class="my-0">Lorem, ipsum.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row p-2 bg-white border rounded mt-2 widget">
+                <div class="col-md-3 mt-1">
+                  <img
+                    class="img-fluid img-responsive rounded product-image"
+                    src="https://i.imgur.com/Bf4dIaN.jpg"
+                  />
+                </div>
+                <div class="col-md-6 mt-1">
+                  <h5>Quant ruybi shirts</h5>
+                  <div class="d-flex flex-row">
+                    <div class="ratings mr-2">
+                      <i class="fa fa-star"></i><i class="fa fa-star"></i
+                      ><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <span>123</span>
+                  </div>
+                  <div class="mt-1 mb-1 spec-1">
+                    <span>100% cotton</span><span class="dot"></span
+                    ><span>Light weight</span><span class="dot"></span
+                    ><span>Best finish<br /></span>
+                  </div>
+                  <div class="mt-1 mb-1 spec-1">
+                    <span>Unique design</span><span class="dot"></span
+                    ><span>For men</span><span class="dot"></span
+                    ><span>Casual<br /></span>
+                  </div>
+                  <p class="text-justify text-truncate para mb-0">
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour, or randomised words which don't
+                    look even slightly believable.<br /><br />
+                  </p>
+                </div>
+                <div
+                class="align-items-center align-content-center col-md-3 border-left mt-1"
+                >
+                  <div class="d-flex flex-row align-items-center">
+                    <h4 class="mr-1">$13.99</h4>
+                    <span class="strike-text">$20.99</span>
+                  </div>
+                  <h6 class="text-success">Free shipping</h6>
+                  <div class="d-flex flex-column mt-4">
+                    <button
+                      class="btn btn-outline-primary btn-sm mt-2"
+                      type="button"
+                    >
+                      Add to wishlist
+                    </button>
+                  </div>
+                </div>
+                <button class="toggleButton btn btn-primary btn-sm d-block my-0 mx-auto" style="width: 15rem;" type="button">
+                  Details
+                </button>
+                <div id="content" class="content hidden">
+                  <div class="col-lg-5 mb-3" id="Sunday, Nov 15th">
+                    <h4 class="mt-0 mb-3 text-dark op-8 font-weight-bold">
+                      Contoh 2 Transit
+                    </h4>
+                    <ul class="list-timeline list-timeline-primary">
+                      <li
+                        class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column"
+                      >
+                        <p class="text-dark flex-fw text-sm text-uppercase">
+                          <span class="text-inverse op-8">09:00 - 10:00</span> -
+                          Lorem, ipsum.
+                        </p>
+                        <p class="mt-10 my-0">Lorem, ipsum.</p>
+                        <p>Lorem.</p>
+                      </li>
+                      <li
+                        class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column"
+                      >
+                        <p class="my-0 text-dark flex-fw text-sm text-uppercase">
+                          <span class="text-inverse op-8">12:00 - 13:00</span> -
+                          Lorem, ipsum.
+                        </p>
+                      </li>
+                    </ul>
+                    <br />
+                    <ul class="list-timeline list-timeline-primary">
+                      <li
+                        class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column"
+                      >
+                        <p class="text-dark flex-fw text-sm text-uppercase">
+                          <span class="text-inverse op-8">09:00 - 10:00</span> -
+                          Lorem, ipsum.
+                        </p>
+                        <p class="mt-10 my-0">Lorem, ipsum.</p>
+                        <p>Lorem.</p>
+                      </li>
+                      <li
+                        class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column"
+                      >
+                        <p class="my-0 text-dark flex-fw text-sm text-uppercase">
+                          <span class="text-inverse op-8">12:00 - 13:00</span> -
+                          Lorem, ipsum.
+                        </p>
+                      </li>
+                    </ul>
+                    <br />
+                    <p class="my-0"><i class="fa-solid fa-hotel"></i>Lorem, ipsum.</p>
+                    <p class="my-0"><i class="fa-solid fa-plane"></i>Lorem, ipsum.</p>
+                    <p class="my-0">Lorem, ipsum.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row widget p-2 bg-white border rounded mt-2">
+                <div class="col-md-3 mt-1">
+                  <img
+                    class="img-fluid img-responsive rounded product-image"
+                    src="https://i.imgur.com/HO8e9b8.jpg"
+                  />
+                </div>
+                <div class="col-md-6 mt-1">
+                  <h5>Quant tinor shirts</h5>
+                  <div class="d-flex flex-row">
+                    <div class="ratings mr-2">
+                      <i class="fa fa-star"></i><i class="fa fa-star"></i
+                      ><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <span>110</span>
+                  </div>
+                  <div class="mt-1 mb-1 spec-1">
+                    <span>100% cotton</span><span class="dot"></span
+                    ><span>Light weight</span><span class="dot"></span
+                    ><span>Best finish<br /></span>
+                  </div>
+                  <div class="mt-1 mb-1 spec-1">
+                    <span>Unique design</span><span class="dot"></span
+                    ><span>For men</span><span class="dot"></span
+                    ><span>Casual<br /></span>
+                  </div>
+                  <p class="text-justify text-truncate para mb-0">
+                    There are many variations of passages of Lorem Ipsum
+                    available, but the majority have suffered alteration in some
+                    form, by injected humour, or randomised words which don't
+                    look even slightly believable.<br /><br />
+                  </p>
+                </div>
+                <div
+                  class="align-items-center align-content-center col-md-3 border-left mt-1"
+                >
+                  <div class="d-flex flex-row align-items-center">
+                    <h4 class="mr-1">$15.99</h4>
+                    <span class="strike-text">$21.99</span>
+                  </div>
+                  <h6 class="text-success">Free shipping</h6>
+                  <div class="d-flex flex-column mt-4">
+                    <button
+                      class="btn btn-outline-primary btn-sm mt-2"
+                      type="button"
+                    >
+                    Add to wishlist
+                  </button>
+                  </div>
+                </div>
+                <button
+                class="btn btn-primary btn-sm toggleButton d-block my-0 mx-auto"
+                style="width: 15rem"
+                type="button"
+                >
+                Details
+              </button>
+                <div id="content" class="content hidden">
+                  <div class="col-lg-5 mb-3" id="Sunday, Nov 15th">
+                    <h4 class="mt-0 mb-3 text-dark op-8 font-weight-bold">
+                      Contoh 1 Transit
+                    </h4>
+                    <ul class="list-timeline list-timeline-primary">
+                      <li
+                        class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column"
+                      >
+                        <p class="text-dark flex-fw text-sm text-uppercase">
+                          <span class="text-inverse op-8">09:00 - 10:00</span> -
+                          Lorem, ipsum.
+                        </p>
+                        <p class="mt-10 my-0">Lorem, ipsum.</p>
+                        <p>Lorem.</p>
+                      </li>
+                      <li
+                        class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column"
+                      >
+                        <p
+                          class="my-0 text-dark flex-fw text-sm text-uppercase"
+                        >
+                          <span class="text-inverse op-8">12:00 - 13:00</span> -
+                          Lorem, ipsum.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <p>Ini adalah konten Widget 1.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Script -->
     <script src="script.js"></script>
     <!-- bootstrap.min.js -->
     <script

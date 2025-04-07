@@ -70,7 +70,9 @@
                   <a class="nav-link" href="login/register.html">Link</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/pemesanan/pesanan.html">Pemesanan</a>
+                  <a class="nav-link" href="/pemesanan/pesanan.html"
+                    >Pemesanan</a
+                  >
                 </li>
                 <li class="nav-item dropdown">
                   <a
@@ -131,40 +133,248 @@
     <!--travel-box start-->
     <section class="travel-box">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="single-travel-boxes">
-              <div id="desc-tabs" class="desc-tabs">
-                <div class="tab-content">
-                  <div class="tab-para">
-                    <div class="col-lg-3 col-md-3 col-sm-4">
-                      <div class="single-tab-select-box">
-                        <h2>Pilih Tanggalmu</h2>
-
-                        <form action="#">
-                          <div
-                            id="reportrange"
-                            style="
-                              background: #fff;
-                              cursor: pointer;
-                              padding: 5px 10px;
-                              border: 1px solid #ccc;
-                              width: 100%;
-                            "
-                          >
-                            <i class="fa fa-calendar"></i>&nbsp; <span></span>
-                            <i class="fa fa-caret-down"></i>
-                          </div>
-                        </form>
-
-                        <!-- /.travel-check-icon -->
+        <div class="single-travel-boxes">
+          <div id="desc-tabs" class="desc-tabs">
+            <div class="tab-para">
+              <div class="single-tab-select-box parent">
+                <div class="row">
+                  <div class="col div1">
+                    <h2>Kapan?</h2>
+                    <form action="#">
+                      <div
+                        id="reportrange"
+                        style="
+                          background: #fff;
+                          cursor: pointer;
+                          padding: 5px 10px;
+                          border: 1px solid #ccc;
+                          width: 50%;
+                        "
+                      >
+                        <i class="fa fa-calendar"></i>&nbsp;
+                        <span></span>
                       </div>
-                      <!--/.single-tab-select-box-->
+                    </form>
+                  </div>
+                  <div class="col div2">
+                    <h2>Ngapain?</h2>
+                    <div
+                      class="btn-group"
+                      role="group"
+                      aria-label="Basic radio toggle button group"
+                    >
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="btnradio"
+                        id="btnradio1"
+                        autocomplete="off"
+                        value="1"
+                        checked
+                      />
+                      <label class="btn btn-outline-primary" for="btnradio1"
+                        ><i class="fa-solid fa-plane-departure"></i>
+                        Penerbangan</label
+                      >
+
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="btnradio"
+                        id="btnradio2"
+                        autocomplete="off"
+                        value="2"
+                      />
+                      <label class="btn btn-outline-primary" for="btnradio2"
+                        ><i class="fa-solid fa-bus"></i> Naik Bis</label
+                      >
+
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="btnradio"
+                        id="btnradio3"
+                        autocomplete="off"
+                        value="3"
+                      />
+                      <label class="btn btn-outline-primary" for="btnradio3"
+                        ><i class="fa-solid fa-train-subway"></i> Naik
+                        Kereta</label
+                      >
                     </div>
-                    <!--/.col-->
                   </div>
                 </div>
+                <div class="row">
+                  <div class="col div3">
+                    <h2>Berapa Orang?</h2>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col">
+                          <p>Dewasa <i class="fa-solid fa-person"></i></p>
+                          <select class="form-control">
+                            <option value="default">1</option>
+
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                          </select>
+                        </div>
+                        <div class="col">
+                          <p>
+                            Anak - Anak
+                            <i class="fa-solid fa-child"></i>
+                          </p>
+                          <select class="form-control">
+                            <option value="default">0</option>
+
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- div 4 Start -->
+
+                  <!-- Penerbangan -->
+                  <div id="content1" class="col content div4">
+                    <h2>Kemana?</h2>
+                    <div class="row">
+                      <div class="search-box col" id="from-box">
+                        <span class="search-icon"
+                          ><i class="fa-solid fa-plane-departure"></i
+                        ></span>
+                        <input
+                          type="text"
+                          class="search-input"
+                          id="from-input"
+                          placeholder="Alamat asal"
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div
+                        class="recommendations"
+                        id="from-recommendations"
+                      ></div>
+
+                      <button class="swap-btn col-md-auto" id="swap-btn">
+                        ⇅
+                      </button>
+
+                      <div class="search-box col" id="to-box">
+                        <span class="search-icon"
+                          ><i class="fa-solid fa-plane-arrival"></i
+                        ></span>
+                        <input
+                          type="text"
+                          class="search-input"
+                          id="to-input"
+                          placeholder="Tujuan"
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div
+                        class="recommendations"
+                        id="to-recommendations"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <!-- Naik bis -->
+                  <div id="content2" class="col content div4">
+                    <h2>Kemana?</h2>
+                    <div class="row">
+                      <div class="search-box col" id="from-box">
+                        <span class="search-icon"
+                          ><i class="fa-solid fa-bus-simple"></i
+                        ></span>
+                        <input
+                          type="text"
+                          class="search-input"
+                          id="from-input"
+                          placeholder="Alamat asal"
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div
+                        class="recommendations"
+                        id="from-recommendations"
+                      ></div>
+
+                      <button class="swap-btn col-md-auto" id="swap-btn">
+                        ⇅
+                      </button>
+
+                      <div class="search-box col" id="to-box">
+                        <span class="search-icon"
+                          ><i class="fa-solid fa-bus-simple"></i
+                        ></span>
+                        <input
+                          type="text"
+                          class="search-input"
+                          id="to-input"
+                          placeholder="Tujuan"
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div
+                        class="recommendations"
+                        id="to-recommendations"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <!-- Naik kereta -->
+                  <div id="content3" class="col content div4">
+                    <h2>Kemana?</h2>
+                    <div class="row">
+                      <div class="search-box col" id="from-box">
+                        <span class="search-icon"
+                          ><i class="fa-solid fa-train-subway"></i
+                        ></span>
+                        <input
+                          type="text"
+                          class="search-input"
+                          id="from-input"
+                          placeholder="Alamat asal"
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div
+                        class="recommendations"
+                        id="from-recommendations"
+                      ></div>
+
+                      <button class="swap-btn col-md-auto" id="swap-btn">
+                        ⇅
+                      </button>
+
+                      <div class="search-box col" id="to-box">
+                        <span class="search-icon"
+                          ><i class="fa-solid fa-train-subway"></i
+                        ></span>
+                        <input
+                          type="text"
+                          class="search-input"
+                          id="to-input"
+                          placeholder="Tujuan"
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div
+                        class="recommendations"
+                        id="to-recommendations"
+                      ></div>
+                    </div>
+                  </div>
+                  <!-- div 4 End -->
+                </div>
               </div>
+
+              <!--/.single-tab-select-box-->
+
+              <!--/.col-->
             </div>
           </div>
         </div>
@@ -495,6 +705,9 @@
     <!-- projetct end -->
 
     <!-- all script -->
+
+    <!-- Script -->
+    <script src="assets/js/script.js"></script>
 
     <!-- TypedJs -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>

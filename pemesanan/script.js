@@ -84,3 +84,79 @@ function updateValue(value) {
   document.getElementById("rangeValue").textContent = formatCurrency(value);
 }
 updateValue(document.getElementById("rangeInput").value);
+
+const rangeInput = document.getElementById("clockInput");
+const rangeValue = document.getElementById("clockValue");
+
+rangeInput.addEventListener("input", function () {
+  rangeValue.textContent = this.value;
+});
+
+document.querySelectorAll(".toggleButton").forEach((button) => {
+  button.addEventListener("click", function () {
+    // Cari elemen konten yang sesuai dalam widget yang sama
+    const content = this.nextElementSibling;
+
+    if (content.classList.contains("hidden")) {
+      content.classList.remove("hidden");
+    } else {
+      content.classList.add("hidden");
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const datePicker = document.getElementById("date-picker");
+  const prevWeekBtn = document.getElementById("prev-week");
+  const nextWeekBtn = document.getElementById("next-week");
+
+  let selectedDate = new Date(); // Tanggal yang sedang dipilih
+  const daysToShow = 5; // Jumlah tombol yang ditampilkan (harus ganjil)
+  const centerIndex = Math.floor(daysToShow / 2); // Index tombol tengah
+
+  // Fungsi untuk mengupdate tampilan date picker
+  function updateDatePicker() {
+    datePicker.innerHTML = "";
+
+    // Hitung tanggal untuk setiap tombol
+    for (let i = 0; i < daysToShow; i++) {
+      const offset = i - centerIndex; // -2, -1, 0, +1, +2
+      const date = new Date(selectedDate);
+      date.setDate(date.getDate() + offset);
+
+      const dayNames = ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"];
+      const monthNames = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "Mei",
+        "Jun",
+        "Jul",
+        "Agu",
+        "Sep",
+        "Okt",
+        "Nov",
+        "Des",
+      ];
+
+      const button = document.createElement("button");
+      button.className = `date-button ${offset === 0 ? "selected" : ""}`;
+      button.innerHTML = `
+              <div class="day">${dayNames[date.getDay()]}</div>
+              <div class="date">${date.getDate()}</div>
+              <div class="month">${monthNames[date.getMonth()]}</div>
+          `;
+
+      button.addEventListener("click", function () {
+        // Update selected date ketika tombol diklik
+        selectedDate = new Date(date);
+        updateDatePicker();
+      });
+
+      datePicker.appendChild(button);
+    }
+  }
+  // Inisialisasi pertama kali
+  updateDatePicker();
+});

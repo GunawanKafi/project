@@ -12,29 +12,129 @@ body {
   background-color: #f0f0f0;
 }
 
-.container {
+.parent {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(12, 1fr);
   gap: 16px;
+  margin: 0 2rem;
 }
-
+/* div 1 start */
 .div1 {
   grid-column: span 7 / span 7;
   background-color: aqua;
 }
+
+.div1 p {
+  font-size: 21px;
+}
+.div1 .form-control {
+  width: 12rem;
+  height: 2rem;
+}
+.div1 .search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  position: relative;
+  background: white;
+  z-index: 1;
+}
+
+.div1 .search-input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.div1 .swap-btn {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(10px);
+  transition: transform 0.3s fease;
+  z-index: 2;
+}
+
+.div1 .swap-btn:hover {
+  background-color: #e0e0e0;
+  /* transform: translateY(10px); */
+  /* transform: rotate(180deg); */
+}
+
+.div1 .search-icon {
+  margin-right: 10px;
+  color: #555;
+}
+
+.div1 .recommendations {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-height: 300px;
+  overflow-y: auto;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.div1 .from-recommendations {
+  top: calc(100% + 5px);
+}
+
+.div1 .to-recommendations {
+  top: calc(100% + 55px);
+}
+
+.div1 .recommendations.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.div1 .recommendation-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s ease;
+}
+
+.div1 .recommendation-item:hover {
+  background-color: #f5f5f5;
+}
+
+.div1 .recommendation-item:last-child {
+  border-bottom: none;
+}
+
+/* div 1 end */
+
 /* div 2 Start */
 .div2 {
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
-  grid-column-start: 1;
+
   grid-row-start: 2;
   background-color: aqua;
 }
-.box{
+.box {
   margin: 1rem;
 }
-.box h6{
+.box h6 {
   margin-bottom: 20px;
 }
 /* div 2 End */
@@ -54,7 +154,7 @@ body {
   grid-row-start: 6;
   background-color: aqua;
 }
-.dropdown{
+.dropdown {
   margin: 1rem;
   justify-content: center;
   align-items: center;
@@ -67,6 +167,16 @@ body {
   grid-column-start: 1;
   grid-row-start: 7;
   background-color: aqua;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #555;
 }
 
 .div6 {
@@ -84,13 +194,66 @@ body {
   grid-row-start: 11;
   background-color: aqua;
 }
-
+/* Div 8 Start */
 .div8 {
   grid-column: span 5 / span 5;
   grid-column-start: 3;
   grid-row-start: 2;
   background-color: aqua;
 }
+
+.div8 .date-picker-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.div8 .date-button {
+  padding: 12px 16px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  text-align: center;
+  min-width: 80px;
+  transition: all 0.3s ease;
+}
+
+.div8 .date-button:hover {
+  background-color: #f5f5f5;
+}
+
+.div8 .date-button.selected {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.div8 .day {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.div8 .date {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.div8 .month {
+  font-size: 12px;
+  color: #666;
+}
+
+.div8 .selected .month {
+  color: #e6f0ff;
+}
+
+/* Div 8 End */
 
 .div13 {
   grid-column: span 5 / span 5;
@@ -99,12 +262,97 @@ body {
   grid-row-start: 3;
   background-color: aqua;
 }
+.ratings i {
+  font-size: 16px;
+  color: red;
+}
+.strike-text {
+  color: red;
+  text-decoration: line-through;
+}
+.product-image {
+  width: 100%;
+}
+.dot {
+  height: 7px;
+  width: 7px;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-top: 3px;
+  background-color: blue;
+  border-radius: 50%;
+  display: inline-block;
+}
+.spec-1 {
+  color: #938787;
+  font-size: 15px;
+}
+h5 {
+  font-weight: 400;
+}
+.para {
+  font-size: 16px;
+}
+#content {
+  margin-top: 10px;
+}
+.list-timeline {
+  margin: 0;
+  padding: 5px 0;
+  position: relative;
+}
 
+.list-timeline:before {
+  width: 1px;
+  background: #ccc;
+  position: absolute;
+  left: 6px;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  content: "";
+}
+
+.list-timeline .list-timeline-item {
+  margin: 0;
+  padding: 0;
+  padding-left: 24px !important;
+  position: relative;
+}
+
+.list-timeline .list-timeline-item:before {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border: 2px solid #ccc;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  content: "";
+  border-radius: 100%;
+  -webkit-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
+}
+
+.list-timeline .list-timeline-item[data-toggle="collapse"] {
+  cursor: pointer;
+}
+
+
+.div13 .hidden {
+  display: none;
+}
+.div13 .container {
+  border: 1px solid #ccc;
+  width: 65rem;
+  margin: 1rem auto;
+}
 .range-container {
   text-align: justify;
   margin: 1rem;
 }
-.range-container #rangeInput{
+.range-container #rangeInput,
+.range-container #clockInput {
   width: 18rem;
 }
 
